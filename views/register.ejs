@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <title>Mercado Liebre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://kit.fontawesome.com/734722e0cd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- comienzo de header -->
+
+  <header class="home__header__contain">
+    <section class="home__header__contain__logo__search">
+      <article class="home__header__logo">
+        <img src="img/logo-mercado-liebre.svg" alt="" />
+      </article>
+
+      <article class="home__header_search">
+        <input type="text" placeholder=" Buscar productos, marcas" />
+        <button class="home__header__search__btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </article>
+
+      <div class="home__header__contain__logo__search__p">
+        <p>
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          Comprá en cuotas y sin tarjeta de crédito
+        </p>
+      </div>
+    </section>
+
+    <section class="home__header__nav">
+      <article class="home__header__nav__1">
+        <ul class="home__header__nav__1">
+          <li>
+            <a href="">Ofertas</a>
+          </li>
+          <li>
+            <a href="">Tiendas Oficiales</a>
+          </li>
+          <li>
+            <a href="">Vender</a>
+          </li>
+          <li>
+            <a href="">Ayuda</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="home__header__nav__2">
+        <ul class="home__header__nav__2">
+          <li>
+            <a href=""> Creá tu cuenta<i class="fa-solid fa-id-card"></i></a>
+          </li>
+          <li>
+            <a href="">
+              Ingresá <i class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+          <li>
+            <a href="">
+              Mis compras <i class="fa-solid fa-basket-shopping"></i></a>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="menu_burger">
+      <button class="home__header__menu__burger__btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </section>
+  </header>
+
+  <!-- fin de header -->
+
+  <!-- inicio de seccion de registro -->
+
+
+
+
+
+
+
+  <main class="login__form__container">
+    <section class="login__form__container">
+
+      <h2>Inicia Sesion</h2>
+      <form class="form__label" action="" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name"value="<%= locals.old && old.name ? old.name : null %>" >
+        <p><%= locals.errors && errors.name ? errors.name.msg : null%></p>
+
+        <label for="surname">Apellido:</label>
+        <input type="text" name="surname" id="surname" value="<%= locals.old && old.surname ? old.surname : null %>" >
+        <p><%= locals.errors && errors.surname ? errors.surname.msg : null%></p>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Ej:juanitoPerez@hotmail.com" id="email"value="<%= locals.old && old.email ? old.email : null %>" >
+        <p> <%= locals.errors && errors.email ? errors.email.msg : null%></p>
+
+
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" placeholder="Ej:nonono1234" id="password">
+        <p><%= locals.errors && errors.password ? errors.password.msg : null%></p>
+
+        <button type="submit">Registrarse</button>
+      </form>
+
+  </main>
+
+
+  <!-- inicia el footer -->
+
+  <footer class="home__footer">
+    <div class="home__footer__article">
+      <div>
+        <i class="fa-solid fa-credit-card"></i>
+      </div>
+      <section>
+        <h4>Pagá con tarjeta o en efectivo</h4>
+        <p>
+          Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+          efectivo en puntos de pago. ¡Y siempre es seguro!
+        </p>
+      </section>
+    </div>
+
+    <div class="home__footer__article">
+      <div>
+        <i class="fa-solid fa-gift"></i>
+      </div>
+      <article>
+        <h4>Envío gratis desde $ 2.500</h4>
+        <p>
+          Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
+          miles de productos. Es un beneficio de Mercado Puntos.
+        </p>
+      </article>
+    </div>
+
+    <div class="home__footer__article">
+      <div>
+        <i class="fa-solid fa-user-shield"></i>
+      </div>
+      <section>
+        <h4>Seguridad, de principio a fin</h4>
+        <p>
+          ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no
+          puedas hacer, porque estás siempre protegid@.
+        </p>
+      </section>
+    </div>
+
+
+  </footer>
+</body>
+
+</html>

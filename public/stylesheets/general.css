@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-amarillo:#EAC926;
+    --color-azul:#03264C;
+    --color-celeste:#1259c3;
+    --color-gris-oscuro:#666;
+    --color-gris-claro:#ebebeb;
+    --color-verde:#39b54a;
+    
+    --color-negro: #111;
+    --color-blanco: #fff;
+
+    --font-general: 'Roboto';
+
+    --font-size-cuerpos: 12px;
+    --font-size-titulos: 24px;
+    --font-size-precios: 18px;
+    --font-size-descuentos: 16px;
+    --font-size-descripciones: 16px;
+}
+
+body{
+    font-family: var(--font-general);
+    background-color: var(--color-gris-claro);
+}
+
+.cuerpo{
+    font-size: var(--font-size-cuerpos);
+}
+.titulo{
+    font-size: var(--font-size-titulos);
+   
+}
+.precio{
+    padding-left:15px;
+    font-size: var(--font-size-precios);
+    width: 28%;
+}
+.descuento{
+  
+    font-size: var(--font-size-descuentos);
+    color:var(--color-gris-oscuro);
+    width: 68%;
+    padding-left: 15px;
+}
+.descripcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-descripciones);
+    color:var(--color-gris-oscuro);
+    padding-top: 30px;
+    padding-bottom: 15px;
+    
+     background-color: var(--color-blanco);
+     
+     padding: 15px;
+}
+
+
+
