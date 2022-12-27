@@ -96,8 +96,7 @@
   <main class="login__form__container">
     <section class="login__form__container">
 
-     <a href="/"><h2>Registrate</h2></a> 
-     
+      <h2>Inicia Sesion</h2>
       <form class="form__label" action="" method="POST">
         <label for="name">Nombre:</label>
         <input type="text" name="name" id="name"value="<%= locals.old && old.name ? old.name : null %>" >
@@ -115,10 +114,17 @@
         <label for="password">Contraseña:</label>
         <input type="password" name="password" placeholder="Ej:nonono1234" id="password">
         <p><%= locals.errors && errors.password ? errors.password.msg : null%></p>
+    <!-- 
+            <input
+            type="checkbox"
+            id="recordar"
+            name="recordar"
+        /><label for="recordar">Recordarme</label> -->
+
 
         <button type="submit">Registrarse</button>
       </form>
-      <a href="/login"><h2>Inicia Sesion</h2></a> 
+
   </main>
 
 

@@ -19,4 +19,35 @@ registerValidation: (req, res) => {
         })
     }
   },
+  login: (req, res) => {
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      let { name,surname,email,password,recordarme } = req.body;
+
+      req.session.user = {
+        name,surname,email,password 
+      };
+
+      if (recordarme) {
+        res.cookie("login", req.session.user, {
+          maxAge: 1000 * 60 * 60 * 24,
+        });
+      }
+
+      /* return res.redirect("/valid"); */
+    } else {
+      return res.render("login", {
+        errors: errors.mapped(),
+      });
+    }
+  },
+  valid: (req, res) => {
+    return res.render("valid");
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    res.cookie("login", null, { maxAge: -1 });
+    return res.redirect("/");
+  },
 };

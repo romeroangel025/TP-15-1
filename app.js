@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var users = require('./routes/users');
+const session = require('express-session');
+const cookieCheck = require('./middlewares/cookieCheck.js');
+const localsUserCheck = require('./middlewares/localsUserCheck.js');
+
 
 var app = express();
 
@@ -17,6 +21,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret : 'login',
+  resave :false,
+  saveUninitialized : true
+})); 
+
+app.use(cookieCheck);
+app.use(localsUserCheck);
 
 app.use('/', users);
 
