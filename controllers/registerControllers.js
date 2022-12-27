@@ -19,7 +19,10 @@ registerValidation: (req, res) => {
         })
     }
   },
-  login: (req, res) => {
+   login: (req, res) => {
+    return res.render("login");
+  },
+  processlogin: (req, res) => {
     let errors = validationResult(req);
 
     if (errors.isEmpty()) {
@@ -35,13 +38,14 @@ registerValidation: (req, res) => {
         });
       }
 
-      /* return res.redirect("/valid"); */
+       return res.redirect("/valid"); 
     } else {
       return res.render("login", {
         errors: errors.mapped(),
       });
     }
   },
+ 
   valid: (req, res) => {
     return res.render("valid");
   },

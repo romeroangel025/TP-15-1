@@ -76,6 +76,16 @@
 
 }
 
+.checkbox {
+  max-width: 500px !important;
+  width: 100% !important;
+  border: 1px double var(--color-azul-claro) !important;
+  border-radius: 5px !important;
+  box-shadow: 1px 1px 1px 1px var(--color-white) !important;
+ 
+
+}
+
 .form__label a {
   
   font-size:12px;
